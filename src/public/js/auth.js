@@ -20,7 +20,6 @@ $(document).ready(function () {
     $.ajax({
       url: loginUrl,
       type: "POST",
-      contentType: "application/json",
       data: JSON.stringify({ email: email, password: password }),
       success: function (response) {
         localStorage.setItem("userName", response.user.name);
