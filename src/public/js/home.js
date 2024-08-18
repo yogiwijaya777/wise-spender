@@ -143,7 +143,6 @@ $(document).ready(function () {
 
   // Weekly Chart
   const { startOfWeek, endOfWeek } = getStartAndEndOfWeek(new Date());
-
   const fetchWeeklyChart = () => {
     showLoader();
     apiService
@@ -167,18 +166,18 @@ $(document).ready(function () {
         new Chart(ctx, {
           type: "bar",
           data: {
-            labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
             datasets: [
               {
                 label: "Money Spent",
                 data: [
-                  sunday,
                   monday,
                   tuesday,
                   wednesday,
                   thursday,
                   friday,
                   saturday,
+                  sunday,
                 ],
                 backgroundColor: "#27272a",
               },
