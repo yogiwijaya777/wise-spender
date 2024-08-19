@@ -231,7 +231,7 @@ $(document).ready(function () {
   const fetchHistory = () => {
     showLoader();
     apiService
-      .get("expense/user?take=5")
+      .get("expense/user?take=6")
       .done((response) => {
         const { data } = response;
         let tbody = $("#history-table-body");
