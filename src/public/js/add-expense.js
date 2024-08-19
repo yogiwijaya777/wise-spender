@@ -102,6 +102,7 @@ $(document).ready(function () {
     const categoryLimit = $("option:selected").data("limit");
 
     if (categoryTotalAmount > categoryLimit) {
+      hideLoader();
       Swal.fire({
         title: "Oops!",
         text: "You cannot add anymore amount because it reaches the category limit",
@@ -111,6 +112,7 @@ $(document).ready(function () {
     }
 
     if (categoryTotalAmount + amount > categoryLimit) {
+      hideLoader();
       Swal.fire({
         title: "Oops!",
         text: "You cannot add this amount because it exceeds the category limit",
